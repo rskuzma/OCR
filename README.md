@@ -27,6 +27,7 @@ OCR for Army Officer Evaluation Records
 ## How to use
 - git clone this repo
 - save any images of OERs into ```data/images/```
+- cd into src
 - If one image with two pages (e.g. 2 pg pdf converted to .tiff)
     - Call ```bash extract_from_oer.sh [filename.extension] [threshold]```
 - If two images in two files
