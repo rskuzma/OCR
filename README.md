@@ -6,6 +6,23 @@ OCR for Army Officer Evaluation Records
 - Remember to install tesseract: https://guides.library.illinois.edu/c.php?g=347520&p=4121425
 - Test regex: https://regex101.com/
 
+### Required file structure
+├── README.md          <- The top-level README for users of this project.
+│
+├── data
+│   ├── images         <- Put your OER images here.
+│   ├── text           <- Text within images is saved here.
+│   └── output         <- The final, structured json is saved here
+│
+└── src
+    ├── extract_from_oer.sh             <- Creates json from one OER image.
+    ├── extract_from_2_pg_oer.sh        <- Creates json from two OER images.
+    ├── split_images.py                 <- Splits one image into two.
+    ├── binarize_images.py              <- Binarizes images to black and white.
+    ├── img_to_text.py                  <- Converts image text to .txt file.
+    └── parse.py                        <- Structures key text fields into json.
+
+
 ### How to use
 - If one image with two pages (e.g. 2 pg pdf converted to .tiff)
     - Call bash extract_from_oer.sh [filename.extension] [threshold]
