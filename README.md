@@ -7,6 +7,7 @@ OCR for Army Officer Evaluation Records
 - Test regex: https://regex101.com/
 
 ### Required file structure
+```
 ├── README.md          <- The top-level README for users of this project.
 │
 ├── data
@@ -21,7 +22,7 @@ OCR for Army Officer Evaluation Records
     ├── binarize_images.py              <- Binarizes images to black and white.
     ├── img_to_text.py                  <- Converts image text to .txt file.
     └── parse.py                        <- Structures key text fields into json.
-
+```
 
 ### How to use
 - If one image with two pages (e.g. 2 pg pdf converted to .tiff)
