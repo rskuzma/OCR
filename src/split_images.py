@@ -57,33 +57,10 @@ def main():
         print('ext: ' + img_ext)
         img = Image.open(IMG_PATH + img_filename)
 
-        pages = []
         for i, page in enumerate(ImageSequence.Iterator(img)):
             temp = IMG_PATH + img_name + "_page{}".format(i+1) + img_ext
             page.save(temp)
-            pages.append(temp)
 
-
-        for page in pages:
-        # # resize
-        # img = resize(img)
-
-            # binarize image
-            thresh = 200
-            # take input from command line
-            if len(sys.argv) == 3:
-                # if threshold within bounds of [0, 255]
-                if (int(sys.argv[2]) > 0) & (int(sys.argv[2]) < 256):
-                    thresh = sys.argv[2]
-                else:
-                    print('input threshold out of bounds. defaulting to thresh=200')
-
-            print("Binarizing... Thresh = " + str(thresh))
-            front = page[0:page.index(img_ext)]
-            back = page[page.index(img_ext):]
-            bin = binarize(img, thresh)
-            bin.save(front + '_bin_' + str(thresh) + back)
-            print('img binarized.')
 
 
 if __name__ == "__main__" :
