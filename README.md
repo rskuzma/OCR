@@ -7,7 +7,10 @@ OCR for Army Officer Evaluation Records
 - Test regex: https://regex101.com/
 
 ### How to use
-- Call bash extract_from_oer.sh [filename.extension] [threshold]
+- If one image with two pages (e.g. 2 pg pdf converted to .tiff)
+    - Call bash extract_from_oer.sh [filename.extension] [threshold]
+- If two images in two files
+    - Call bash extract_from_2_pg_oer.sh [file1.extension] [file2.extension] [threshold]
 
 ### Order of executed scripts
 - split_images.py
