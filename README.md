@@ -4,8 +4,12 @@ OCR for Army Officer Evaluation Records
 ## Useful links
 - Tutorial: https://medium.com/analytics-vidhya/optical-character-recognition-ocr-using-py-tesseract-part-1-29ba8104eb2b
 - Remember to install tesseract: https://guides.library.illinois.edu/c.php?g=347520&p=4121425
+- Test regex: https://regex101.com/
 
-### Order
+### How to use
+- Call bash extract_from_oer.sh [filename.extension] [threshold]
+
+### Order of executed scripts
 - split_images.py
     - Split multi-page image into separate images. (good if turned pdf > image)
     - python split_images.py [img_filename]
