@@ -29,8 +29,10 @@ OCR for Army Officer Evaluation Records
 - save any images of OERs into ```data/images/```
 - cd into src
 - If one image with two pages (e.g. 2 pg pdf converted to .tiff)
+    - Format must be name.extension
     - Call ```bash extract_from_oer.sh [filename.extension] [threshold]```
 - If two images in two files
+    - Format must be name.page1.extension and name.page2.extension
     - Call ```bash extract_from_2_pg_oer.sh [file1.extension] [file2.extension] [threshold]```
 - Threshold is required for binarization of images into black and white
 
