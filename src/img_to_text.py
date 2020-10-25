@@ -19,7 +19,7 @@ def write_text_to_file(img, filename: str, output_path='../data/text/', page = '
     with open(output_path+filename + '.txt', 'a') as outfile:
         print('opening file: ' + output_path + filename + '.txt')
         outfile.write(pytesseract.image_to_string(img))
-        print('wrote pytesseract image to string')
+        print('used pytesseract to write image to string and appended to file')
         outfile.write('\n')
         if page != '':
             outfile.write('===== END OF ' + page.upper() + ' =====')
@@ -47,6 +47,7 @@ def main():
             print('image_filename: ' + img_filename)
             print('IMG_PATH: ' + IMG_PATH)
             print('img_name: ' + img_name)
+            print('img_page: ' + img_page)
             print('img_ext: ' + img_ext)
             img = Image.open(IMG_PATH + img_filename)
 
